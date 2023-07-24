@@ -44,7 +44,7 @@ MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME")
 
 # Your User ID.
 OWNER_ID = list(
-    map(int, getenv("OWNER_ID", "5524856269").split())
+    map(int, getenv("OWNER_ID", "1843616228").split())
 )  # Input type must be interger
 
 # Get it from http://dashboard.heroku.com/account
@@ -56,7 +56,7 @@ HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
 # For customized or modified Repository
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/Samidaites2/musik",
+    "https://github.com/5GVckyy/MusicTagAll",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 

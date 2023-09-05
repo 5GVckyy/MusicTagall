@@ -29,7 +29,7 @@ from YukkiMusic.utils.stream.queue import put_queue, put_queue_index
 from YukkiMusic.utils.thumbnails import gen_thumb
 
 #from YukkiMusic.utils.inline.play import (stream_markup,
-                                          telegram_markup)
+ #                                         telegram_markup)
 
 
 async def stream(

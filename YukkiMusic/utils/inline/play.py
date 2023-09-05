@@ -37,7 +37,7 @@ def stream_markup_timer(_, videoid, chat_id):
     #bar = random.choice(selections)
     buttons = [
         [
-            InlineKeyboardButton(text="BukanDevs" url="t.me/BukanDevs"
+            InlineKeyboardButton(text="BukanDevs", url=f"t.me/BukanDevs"),
         ],
         [
             InlineKeyboardButton(text="▶️", callback_data=f"ADMIN Pause|{chat_id}"

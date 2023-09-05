@@ -100,7 +100,7 @@ def telegram_markup_timer(_, chat_id,):
 
 
 def stream_markup(_, videoid, chat_id):
-   buttons = [
+    buttons = [
         [
             InlineKeyboardButton(text="Pause", callback_data=f"ADMIN Pause|{chat_id}"
             ),

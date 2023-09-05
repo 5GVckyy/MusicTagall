@@ -22,15 +22,15 @@ from YukkiMusic.utils.database import (add_active_chat,
                                        is_active_chat,
                                        is_video_allowed, music_on)
 from YukkiMusic.utils.exceptions import AssistantErr
-from YukkiMusic.utils.inline.play import (panel_markup_1)
+#from YukkiMusic.utils.inline.play import (panel_markup_1)
 from YukkiMusic.utils.inline.playlist import close_markup
 from YukkiMusic.utils.pastebin import Yukkibin
 from YukkiMusic.utils.stream.queue import put_queue, put_queue_index
 from YukkiMusic.utils.thumbnails import gen_thumb
 
-#from YukkiMusic.utils.inline.play import (stream_markup,
- #                                         telegram_markup)
-
+from YukkiMusic.utils.inline.play import (stream_markup,
+                                          telegram_markup)
+# Special Thanks To YukkiMusic For Code, I'm allowed to add a pause skip button in the markup
 
 async def stream(
     _,
@@ -197,9 +197,8 @@ async def stream(
                 forceplay=forceplay,
             )
             img = await gen_thumb(vidid)
-          #  button = stream_markup(_, vidid, chat_id)
-          #  button = panel_markup_1(_, vidid, videoid, chat_id)
-            button = panel_markup_1(_, vidid, chat_id)
+            button = stream_markup(_, vidid, chat_id)
+           # button = panel_markup_1(_, vidid, chat_id) ini juga salah,
             run = await app.send_photo(
                 original_chat_id,
                 photo=img,
@@ -252,8 +251,8 @@ async def stream(
                 "audio",
                 forceplay=forceplay,
             )
-            #button = telegram_markup(_, chat_id)
-            button = panel_markup_1(_, chat_id)
+            button = telegram_markup(_, chat_id)
+           # button = panel_markup_1(_, chat_id) yang inisalah
             run = await app.send_photo(
                 original_chat_id,
                 photo=config.SOUNCLOUD_IMG_URL,

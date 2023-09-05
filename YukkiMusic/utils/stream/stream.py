@@ -22,7 +22,7 @@ from YukkiMusic.utils.database import (add_active_chat,
                                        is_active_chat,
                                        is_video_allowed, music_on)
 from YukkiMusic.utils.exceptions import AssistantErr
-from YukkiMusic.utils.inline.play import (stream_markup,
+from YukkiMusic.utils.inline.play import (panel_markup_1,
                                           telegram_markup)
 from YukkiMusic.utils.inline.playlist import close_markup
 from YukkiMusic.utils.pastebin import Yukkibin

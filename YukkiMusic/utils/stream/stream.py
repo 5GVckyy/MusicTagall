@@ -22,12 +22,14 @@ from YukkiMusic.utils.database import (add_active_chat,
                                        is_active_chat,
                                        is_video_allowed, music_on)
 from YukkiMusic.utils.exceptions import AssistantErr
-from YukkiMusic.utils.inline.play import (panel_markup_1,
-                                          telegram_markup)
+from YukkiMusic.utils.inline.play import (panel_markup_1)
 from YukkiMusic.utils.inline.playlist import close_markup
 from YukkiMusic.utils.pastebin import Yukkibin
 from YukkiMusic.utils.stream.queue import put_queue, put_queue_index
 from YukkiMusic.utils.thumbnails import gen_thumb
+
+#from YukkiMusic.utils.inline.play import (stream_markup,
+                                          telegram_markup)
 
 
 async def stream(
@@ -250,7 +252,8 @@ async def stream(
                 "audio",
                 forceplay=forceplay,
             )
-            button = telegram_markup(_, chat_id)
+            #button = telegram_markup(_, chat_id)
+            button = panel_markup_1(_, chat_id)
             run = await app.send_photo(
                 original_chat_id,
                 photo=config.SOUNCLOUD_IMG_URL,

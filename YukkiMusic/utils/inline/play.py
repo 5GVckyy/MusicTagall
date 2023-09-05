@@ -37,16 +37,28 @@ def stream_markup_timer(_, videoid, chat_id):
     #bar = random.choice(selections)
     buttons = [
         [
-            InlineKeyboardButton(text="Pause", callback_data=f"ADMIN Pause|{chat_id}"
+            InlineKeyboardButton(text="▶️", callback_data=f"ADMIN Pause|{chat_id}"
             ),
-            InlineKeyboardButton(text="Resume",
+            InlineKeyboardButton(text="⏸️",
                 callback_data=f"ADMIN Resume|{chat_id}",
             ),
-            InlineKeyboardButton(text="Skip", callback_data=f"ADMIN Skip|{chat_id}"
+            InlineKeyboardButton(
+                text="🔁", callback_data=f"ADMIN Loop|{chat_id}"
             ),
-            InlineKeyboardButton(text="Stop", callback_data=f"ADMIN Stop|{chat_id}"
+            InlineKeyboardButton(text="⏭️", callback_data=f"ADMIN Skip|{chat_id}"
+            ),
+            InlineKeyboardButton(text="⏹️", callback_data=f"ADMIN Stop|{chat_id}"
             ),
         ],
+        [
+            InlineKeyboardButton(
+                text=_["CLOSEMENU_BUTTON"], callback_data="close"
+            )
+        ],
+    ]
+    return buttons
+
+"""
         [
             InlineKeyboardButton(
                 text=_["PL_B_2"],
@@ -57,13 +69,8 @@ def stream_markup_timer(_, videoid, chat_id):
                 callback_data=f"PanelMarkup {videoid}|{chat_id}",
             ),
         ],
-        [
-            InlineKeyboardButton(
-                text=_["CLOSEMENU_BUTTON"], callback_data="close"
-            )
-        ],
-    ]
-    return buttons
+"""
+
 
 
 #def telegram_markup_timer(_, chat_id, played, dur):

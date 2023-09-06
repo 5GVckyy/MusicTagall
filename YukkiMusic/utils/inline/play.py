@@ -83,14 +83,20 @@ def telegram_markup_timer(_, chat_id,):
     #bar = random.choice(selections)
     buttons = [
         [
-            InlineKeyboardButton(text="Pause", callback_data=f"ADMIN Pause|{chat_id}"
+            InlineKeyboardButton(text="BukanDevs", url=f"t.me/BukanDevs"),
+        ],
+        [
+            InlineKeyboardButton(text="▶️", callback_data=f"ADMIN Pause|{chat_id}"
             ),
-            InlineKeyboardButton(text="Resume",
+            InlineKeyboardButton(text="⏸️",
                 callback_data=f"ADMIN Resume|{chat_id}",
             ),
-            InlineKeyboardButton(text="Skip", callback_data=f"ADMIN Skip|{chat_id}"
+            InlineKeyboardButton(
+                text="🔁", callback_data=f"ADMIN Loop|{chat_id}"
             ),
-            InlineKeyboardButton(text="Stop", callback_data=f"ADMIN Stop|{chat_id}"
+            InlineKeyboardButton(text="⏭️", callback_data=f"ADMIN Skip|{chat_id}"
+            ),
+            InlineKeyboardButton(text="⏹️", callback_data=f"ADMIN Stop|{chat_id}"
             ),
         ],
         [
@@ -143,6 +149,23 @@ def stream_markup(_, videoid, chat_id):
 
 def telegram_markup(_, chat_id):
     buttons = [
+        [
+            InlineKeyboardButton(text="BukanDevs", url=f"t.me/BukanDevs"),
+        ],
+        [
+            InlineKeyboardButton(text="▶️", callback_data=f"ADMIN Pause|{chat_id}"
+            ),
+            InlineKeyboardButton(text="⏸️",
+                callback_data=f"ADMIN Resume|{chat_id}",
+            ),
+            InlineKeyboardButton(
+                text="🔁", callback_data=f"ADMIN Loop|{chat_id}"
+            ),
+            InlineKeyboardButton(text="⏭️", callback_data=f"ADMIN Skip|{chat_id}"
+            ),
+            InlineKeyboardButton(text="⏹️", callback_data=f"ADMIN Stop|{chat_id}"
+            ),
+        ],
         [
             InlineKeyboardButton(
                 text=_["PL_B_3"],
